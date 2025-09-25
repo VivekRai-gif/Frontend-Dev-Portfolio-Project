@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
 import { WorkerType } from '@/types/workers'
 import WorkerCard from '../WorkerCard'
 
@@ -15,14 +16,14 @@ describe('WorkerCard', () => {
     render(<WorkerCard worker={mockWorker} />)
     
     expect(screen.getByText('John Doe')).toBeInTheDocument()
-    expect(screen.getByText('Plumber')).toBeInTheDocument()
+    expect(screen.getAllByText('Plumber')).toHaveLength(2) // One in badge, one in main content
     expect(screen.getByText('₹118')).toBeInTheDocument() // 100 * 1.18
   })
 
   it('has proper accessibility attributes', () => {
     render(<WorkerCard worker={mockWorker} />)
     
-    const card = screen.getByRole('button')
+    const card = screen.getByRole('button', { name: /John Doe - Plumber - ₹118 per day/ })
     expect(card).toHaveAttribute('tabIndex', '0')
     expect(card).toHaveAttribute('aria-label', 'John Doe - Plumber - ₹118 per day')
   })

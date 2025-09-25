@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import '@testing-library/jest-dom'
 import FilterBar from '../FilterBar'
 
 const mockProps = {
@@ -51,7 +52,7 @@ describe('FilterBar', () => {
   it('renders service options correctly', () => {
     render(<FilterBar {...mockProps} />)
     
-    expect(screen.getByRole('option', { name: 'All Services' })).toBeInTheDocument()
+    expect(screen.getByRole('option', { name: '🎯 All Services' })).toBeInTheDocument()
     expect(screen.getByRole('option', { name: 'Plumber' })).toBeInTheDocument()
     expect(screen.getByRole('option', { name: 'Electrician' })).toBeInTheDocument()
     expect(screen.getByRole('option', { name: 'Carpenter' })).toBeInTheDocument()
