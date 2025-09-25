@@ -3,12 +3,12 @@ const SkeletonCard = () => {
     <article className="glass rounded-3xl overflow-hidden shadow-xl animate-fade-in-up" aria-hidden="true">
       <div className="relative w-full h-72 overflow-hidden">
         {/* Image skeleton with shimmer effect */}
-        <div className="w-full h-full bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 animate-shimmer relative">
+        <div className="w-full h-full animate-shimmer relative" style={{ background: 'linear-gradient(135deg, #B8E6D3 0%, #F7F3E9 100%)' }}>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer-wave"></div>
           
           {/* Service badge skeleton */}
           <div className="absolute top-4 left-4">
-            <div className="bg-gradient-to-r from-indigo-200 to-purple-200 rounded-full w-24 h-8 animate-pulse"></div>
+            <div className="rounded-full w-24 h-8 animate-pulse" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)' }}></div>
           </div>
           
           {/* Price badge skeleton */}

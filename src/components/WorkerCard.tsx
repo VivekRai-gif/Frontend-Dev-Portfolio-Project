@@ -77,7 +77,7 @@ const WorkerCard = memo(({ worker }: WorkerCardProps) => {
 
         {/* Service Badge */}
         <div className="absolute top-4 left-4 animate-fade-in-left animate-delay-100">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 animate-gradient text-white rounded-full text-sm font-semibold shadow-lg backdrop-blur font-body">
+          <span className="inline-flex items-center gap-2 px-4 py-2 text-white rounded-full text-sm font-semibold shadow-lg backdrop-blur font-body" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)' }}>
             <span className="text-lg">{getServiceEmoji(worker.service)}</span>
             {worker.service}
           </span>
@@ -161,7 +161,7 @@ const WorkerCard = memo(({ worker }: WorkerCardProps) => {
 
         <div className="flex items-center justify-between">
           <div>
-            <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent font-display">
+            <span className="text-3xl font-bold text-transparent font-display" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>
               ₹{finalPrice}
             </span>
             <span className="text-sm text-gray-500 font-body ml-2">per day</span>
@@ -180,8 +180,12 @@ const WorkerCard = memo(({ worker }: WorkerCardProps) => {
             {['Experienced', 'Reliable', 'Verified'].map((badge, index) => (
               <span 
                 key={badge}
-                className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 font-semibold font-body animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold font-body animate-fade-in-up"
+                style={{ 
+                  background: 'linear-gradient(135deg, #B8E6D3 0%, #F7F3E9 100%)', 
+                  color: '#4A5568',
+                  animationDelay: `${index * 0.1}s`
+                }}
               >
                 {badge}
               </span>

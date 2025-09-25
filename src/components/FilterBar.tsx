@@ -41,7 +41,7 @@ const FilterBar = ({
             className="w-full pl-12 pr-6 py-4 bg-white/70 backdrop-blur border-2 border-indigo-200 rounded-2xl focus:ring-4 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all duration-300 text-gray-800 placeholder-gray-500 font-body hover:bg-white/90 hover:shadow-lg"
             aria-describedby="search-help"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div className="absolute inset-0 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(139, 159, 232, 0.1) 0%, rgba(168, 194, 168, 0.1) 100%)' }}></div>
           <div id="search-help" className="sr-only">
             Search workers by name or service type
           </div>
@@ -69,7 +69,7 @@ const FilterBar = ({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div className="absolute inset-0 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(168, 194, 168, 0.1) 0%, rgba(184, 230, 211, 0.1) 100%)' }}></div>
           <div id="sort-help" className="sr-only">
             Sort workers by different criteria
           </div>
@@ -99,7 +99,7 @@ const FilterBar = ({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-rose-500/10 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div className="absolute inset-0 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(184, 230, 211, 0.1) 0%, rgba(247, 243, 233, 0.1) 100%)' }}></div>
           <div id="filter-help" className="sr-only">
             Filter workers by service type
           </div>

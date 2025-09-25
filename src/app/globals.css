@@ -133,12 +133,28 @@ html {
   }
 }
 
-@keyframes gradient-shift {
-  0% {
+@keyframes gradientShift {
+  0%, 100% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+/* Updated gradient shift for pastel theme */
+@keyframes pastelGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
   }
   100% {
     background-position: 0% 50%;
@@ -184,8 +200,9 @@ html {
 }
 
 .animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
+  background: linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 50%, #B8E6D3 100%);
+  background-size: 300% 300%;
+  animation: pastelGradientShift 4s ease infinite;
 }
 
 .animate-shimmer {
@@ -257,19 +274,19 @@ html {
 
 /* Text gradient effects */
 .text-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-rainbow {
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+  background: linear-gradient(45deg, #8B9FE8, #A8C2A8, #B8E6D3, #E8C5E8, #F7F3E9);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 3s ease infinite;
+  animation: pastelGradientShift 4s ease infinite;
 }
 
 /* Loading shimmer effect */
@@ -367,6 +384,7 @@ html {
 }
 
 /* Glass morphism improvements */
+/* Enhanced Utility Classes */
 .glass {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
@@ -376,4 +394,15 @@ html {
     0 8px 32px rgba(31, 38, 135, 0.37),
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Soft Pastel Color Theme Variables */
+:root {
+  --color-primary: #8B9FE8; /* Soft purple-blue */
+  --color-secondary: #A8C2A8; /* Sage green */
+  --color-accent: #B8E6D3; /* Soft mint */
+  --color-light: #F7F3E9; /* Cream */
+  --color-gradient-primary: linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 50%, #B8E6D3 100%);
+  --color-gradient-secondary: linear-gradient(45deg, #A8C2A8 0%, #B8E6D3 50%, #F7F3E9 100%);
+  --color-gradient-hero: linear-gradient(135deg, #8B9FE8 0%, #9BB5E8 25%, #A8C2A8 50%, #B8E6D3 75%, #F7F3E9 100%);
 }

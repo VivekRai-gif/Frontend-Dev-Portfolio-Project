@@ -28,12 +28,12 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
+    <footer className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 50%, #B8E6D3 100%)' }}>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-indigo-500/10 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-10 left-10 w-32 h-32 rounded-full blur-xl animate-float" style={{ background: 'rgba(247, 243, 233, 0.1)' }}></div>
+        <div className="absolute top-20 right-20 w-24 h-24 rounded-full blur-xl animate-float" style={{ background: 'rgba(184, 230, 211, 0.1)', animationDelay: '2s' }}></div>
+        <div className="absolute bottom-10 left-1/3 w-40 h-40 rounded-full blur-xl animate-float" style={{ background: 'rgba(168, 194, 168, 0.1)', animationDelay: '1s' }}></div>
         
         {/* Floating particles */}
         {[...Array(20)].map((_, i) => (
@@ -58,9 +58,9 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-1 animate-fade-in-up">
               <div className="mb-6">
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient font-display">
+                <h3 className="text-3xl font-bold text-transparent font-display" style={{ background: 'linear-gradient(135deg, #F7F3E9 0%, #B8E6D3 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>
                   WorkersHub
-                  <span className="inline-block w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full ml-2 animate-pulse"></span>
+                  <span className="inline-block w-3 h-3 rounded-full ml-2 animate-pulse" style={{ background: 'linear-gradient(135deg, #B8E6D3 0%, #F7F3E9 100%)' }}></span>
                 </h3>
                 <p className="text-gray-300 mt-4 leading-relaxed font-body">
                   Connecting skilled professionals with those who need their expertise. 
@@ -77,7 +77,7 @@ const Footer = () => {
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent backdrop-blur-sm transition-all duration-300 font-body"
                   />
-                  <button className="btn-enhanced bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl font-body">
+                  <button className="btn-enhanced px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl font-body text-white" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)' }}>
                     Subscribe ✨
                   </button>
                 </div>
@@ -198,7 +198,8 @@ const Footer = () => {
         {/* Scroll to top button */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full flex items-center justify-center text-white shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-110 animate-bounce-subtle z-50"
+          className="fixed bottom-8 right-8 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-110 animate-bounce-subtle z-50"
+          style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)' }}
           aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

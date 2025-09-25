@@ -127,16 +127,16 @@ export default function WorkersPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
-      {/* Floating background elements */}
-      <div className="floating-element top-20 left-10 w-32 h-32 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 rounded-full blur-xl animate-float"></div>
-      <div className="floating-element top-40 right-20 w-24 h-24 bg-gradient-to-br from-pink-400/20 to-rose-400/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="floating-element bottom-20 left-1/3 w-40 h-40 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50/50 via-purple-50/50 to-pink-50/50 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #F7F3E9 0%, #B8E6D3 25%, #A8C2A8 50%, #8B9FE8 100%)' }}>
+      {/* Floating background elements with pastel colors */}
+      <div className="floating-element top-20 left-10 w-32 h-32 rounded-full blur-xl animate-float" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)', opacity: '0.3' }}></div>
+      <div className="floating-element top-40 right-20 w-24 h-24 rounded-full blur-xl animate-float" style={{ background: 'linear-gradient(135deg, #B8E6D3 0%, #F7F3E9 100%)', opacity: '0.4', animationDelay: '1s' }}></div>
+      <div className="floating-element bottom-20 left-1/3 w-40 h-40 rounded-full blur-xl animate-float" style={{ background: 'linear-gradient(135deg, #A8C2A8 0%, #8B9FE8 100%)', opacity: '0.2', animationDelay: '2s' }}></div>
       
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 animate-gradient relative overflow-hidden">
+      <section className="pt-32 pb-20 animate-gradient relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 50%, #B8E6D3 100%)' }}>
         {/* Hero background effects */}
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="floating-element top-20 left-20 w-2 h-2 bg-white/40 rounded-full animate-float"></div>
@@ -155,7 +155,7 @@ export default function WorkersPage() {
               Browse through hundreds of <span className="text-purple-300 font-semibold">verified workers</span> across various services.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6 animate-fade-in-up animate-delay-400">
-              <button className="btn-enhanced px-10 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 animate-gradient text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl font-body transform hover:scale-105">
+              <button className="btn-enhanced px-10 py-4 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl font-body transform hover:scale-105" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)' }}>
                 <span className="relative z-10">🚀 Get Started</span>
               </button>
               <button className="btn-enhanced px-10 py-4 glass border-2 border-white/30 text-white rounded-2xl font-bold text-lg hover:bg-white/10 font-body transform hover:scale-105">

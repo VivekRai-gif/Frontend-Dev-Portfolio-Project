@@ -28,7 +28,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 animate-fade-in-left">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center animate-gradient shadow-lg animate-pulse-glow">
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center animate-gradient shadow-lg animate-pulse-glow" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 50%, #B8E6D3 100%)' }}>
                 <span className="text-white font-bold text-xl font-display">W</span>
               </div>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-float"></div>
@@ -64,7 +64,7 @@ const Navbar = () => {
                 }`}>
                   {item}
                 </span>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(90deg, #8B9FE8 0%, #A8C2A8 100%)' }}></span>
               </a>
             ))}
           </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
                 Sign In
               </span>
             </button>
-            <button className="btn-enhanced px-6 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 animate-gradient text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl font-body">
+            <button className="btn-enhanced px-6 py-3 text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl font-body" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)' }}>
               <span className="relative z-10">Hire Now</span>
             </button>
           </div>
@@ -125,7 +125,7 @@ const Navbar = () => {
                     Sign In
                   </span>
                 </button>
-                <button className="w-full btn-enhanced py-3 px-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 animate-gradient text-white rounded-xl font-semibold shadow-lg font-body">
+                <button className="w-full btn-enhanced py-3 px-4 text-white rounded-xl font-semibold shadow-lg font-body" style={{ background: 'linear-gradient(135deg, #8B9FE8 0%, #A8C2A8 100%)' }}>
                   Hire Now
                 </button>
               </div>
